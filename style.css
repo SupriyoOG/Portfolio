@@ -32,33 +32,36 @@ h1 {
 }
 
 .intro button {
-        background: #0070FF10;
-        border: 1px solid #0070FF;
-        height: 50px;
-        width: 120px;
-        border-radius: 16px;
-        box-shadow: 10px 20px 16px #00000070, 0 0 10px #0070FF, inset 0 0 10px #0070FF;
-        text-align: center;
-        color: white;
-        text-transform: uppercase;
-        font-weight: 200;
-        letter-spacing: 2px;
-        position: absolute;
-        left: 32vw;
-        transition: all .2s ease-in-out;
-        opacity: 0;
-        animation: fade 1s 2s forwards ease-in-out;
+    background: #0070FF10;
+    border: 1px solid #0070FF;
+    height: 80px;
+    width: 160px;
+    border-radius: 16px;
+    box-shadow: 10px 20px 16px #00000070, 0 0 10px #0070FF, inset 0 0 10px #0070FF;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 15pt;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    animation: fade 1s 2s forwards ease-in-out;
 }
 
 .intro button:hover {
-        box-shadow: 0 0 30px #0070FF;
-        text-shadow: 0 0 8px white;
-        transform: scale(1.1);
+    box-shadow: 0 0 30px #0070FF;
+    text-shadow: 0 0 8px white;
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .intro button:active {
-        filter: brightness(80%);
-        transform: scale(1);
+    filter: brightness(80%);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .intro .light-blue {
@@ -140,6 +143,6 @@ h1 {
         margin: 50px auto;
         font-size: 12pt;
         text-transform: lowercase;
-        transform: translateY(-200vh);
-        transition: all .3s ease-in-out;
+        transform: translateY(-500vh);
+        transition: all .5s ease-in-out;
 }

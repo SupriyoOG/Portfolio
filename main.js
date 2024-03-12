@@ -7,5 +7,5 @@ projectBtn.addEventListener('mouseover', () => {
 });
 
 projectBtn.addEventListener('mouseout', () => {
-        info.style.transform = 'translateY(-200vh)';
+        info.style.transform = 'translateY(-500vh)';
 });
