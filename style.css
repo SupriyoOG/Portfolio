@@ -132,9 +132,9 @@ h1 {
 }
 
 .info {
-        background: #0070FF50;
-        box-shadow: 0 0 10px #0070FF, inset 0 0 10px #0070FF;
-        border: 1px solid #0070FF;
+        background: #F1FF0050;
+        box-shadow: 0 0 10px #F1FF0050, inset 0 0 10px #F1FF0050;
+        border: 1px solid #F1FF0050;
         height: 100px;
         width: 50vw;
         border-radius: 8px;
@@ -143,6 +143,8 @@ h1 {
         margin: 50px auto;
         font-size: 12pt;
         text-transform: lowercase;
+        position: relative;
+        top: -210vh;
         transform: translateY(-500vh);
         transition: all .5s ease-in-out;
 }

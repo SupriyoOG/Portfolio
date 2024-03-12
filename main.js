@@ -3,7 +3,7 @@ const projectBtn = document.getElementById('projectBtn');
 
 
 projectBtn.addEventListener('mouseover', () => {
-        info.style.transform = 'translateY(-1800%)';
+        info.style.transform = 'translateY(0)';
 });
 
 projectBtn.addEventListener('mouseout', () => {
