@@ -1,0 +1,145 @@
+body {
+        font-size: 18pt;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        background: fixed no-repeat linear-gradient(to bottom, #002555, #000C10);
+        color: white;
+        font-family: 'Poppins', sans-serif, serif;
+}
+
+.intro {
+        position: relative;
+        top: 30vh;
+        height: 90vh;
+}
+
+h1 {
+        text-align: center;
+        font-weight: 600;
+        color: #0070FF;
+        text-shadow: 0 0 20px currentColor;
+        font-size: 32pt;
+        animation: pop 1s forwards ease-in-out;
+}
+
+.intro p {
+        text-align: center;
+        text-shadow: 0 0 16px currentColor;
+        opacity: 0;
+        font-weight: 200;
+        animation: pop 1s 1s forwards ease-in-out;
+}
+
+.intro button {
+        background: #0070FF10;
+        border: 1px solid #0070FF;
+        height: 50px;
+        width: 120px;
+        border-radius: 16px;
+        box-shadow: 10px 20px 16px #00000070, 0 0 10px #0070FF, inset 0 0 10px #0070FF;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 200;
+        letter-spacing: 2px;
+        position: absolute;
+        left: 32vw;
+        transition: all .2s ease-in-out;
+        opacity: 0;
+        animation: fade 1s 2s forwards ease-in-out;
+}
+
+.intro button:hover {
+        box-shadow: 0 0 30px #0070FF;
+        text-shadow: 0 0 8px white;
+        transform: scale(1.1);
+}
+
+.intro button:active {
+        filter: brightness(80%);
+        transform: scale(1);
+}
+
+.intro .light-blue {
+        background: #0070FF;
+        height: 300px;
+        width: 300px;
+        filter: blur(150px) brightness(150%);
+        position: absolute;
+        left: -10rem;
+        top: 30rem;
+        opacity: 0;
+        animation: fade 1s 2s forwards ease;
+}
+
+.intro .light-red {
+        background: hotpink;
+        height: 300px;
+        width: 300px;
+        filter: blur(150px) brightness(150%) saturate(200%);
+        position: absolute;
+        right: -1rem;
+        bottom: 60rem;
+        opacity: 0;
+        animation: fade 1s 2s forwards ease;
+}
+
+@keyframes fade {
+        from {
+                opacity: 0;
+        }
+
+        to {
+                opacity: 1;
+        }
+}
+
+@keyframes pop {
+        from {
+                opacity: 0;
+                transform: translateY(20px);
+        }
+
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+
+
+/* ---------------------------- */
+
+.about h2 {
+        text-align: center;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        text-shadow: 0 0 16px white;
+}
+
+.about p {
+        padding: 20px;
+        text-align: justify;
+}
+
+.about span {
+        text-shadow: 0 0 32px currentColor;
+        filter: brightness(200%);
+}
+
+.info {
+        background: #0070FF50;
+        box-shadow: 0 0 10px #0070FF, inset 0 0 10px #0070FF;
+        border: 1px solid #0070FF;
+        height: 100px;
+        width: 50vw;
+        border-radius: 8px;
+        text-align: center;
+        text-shadow: 0 0 8px black;
+        margin: 50px auto;
+        font-size: 12pt;
+        text-transform: lowercase;
+        transform: translateY(-200vh);
+        transition: all .3s ease-in-out;
+}
