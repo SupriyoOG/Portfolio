@@ -1,7 +1,7 @@
 body {
         font-size: 18pt;
         margin: 0;
-        padding: 20px;
+        padding: 0;
         box-sizing: border-box;
         background: fixed no-repeat linear-gradient(to bottom, #002555, #000C10);
         color: white;
@@ -152,5 +152,44 @@ h1 {
 /* -------------------------------- */
 
 .brief {
-        text-shadow: 0 0 16px white
+        padding: 20px;
+}
+
+.brief h3{
+        text-align: center;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        text-shadow: 0 0 16px white;
+}
+
+.brief p {
+        text-align: justify;
+        letter-spacing: 2px;
+}
+
+
+/* ------------------------------- */
+
+footer {
+        background: black;
+        box-shadow: 0 0 30px black;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+}
+
+footer i {
+    color: white;
+    margin: auto 20px;
+    padding-bottom: 20px;
+    font-size: 28pt;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+footer i:hover {
+    text-shadow: 0 0 30px red;
+    text-decoration: 2px solid overline;
+    color: red;
 }
