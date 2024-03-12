@@ -146,3 +146,9 @@ h1 {
         transform: translateY(-500vh);
         transition: all .5s ease-in-out;
 }
+
+/* -------------------------------- */
+
+.brief {
+        text-shadow: 0 0 16px white
+}
