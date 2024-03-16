@@ -13,5 +13,5 @@ projectBtn.addEventListener('mouseout', () => {
 
 
 document.querySelector('.thoughts-page').addEventListener('click', function() {
-            window.location.href = '/form/form.html';
+            window.location.href = 'form/form.html';
         });
