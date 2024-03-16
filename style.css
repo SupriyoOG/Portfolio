@@ -45,7 +45,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.thoughts-page:hover::after {
+.thoughts-page:active::after {
     opacity: 1;
     transform: translateX(-50%) translateY(10px)
 }
