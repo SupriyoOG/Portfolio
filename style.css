@@ -227,56 +227,6 @@ h1 {
         filter: brightness(200%);
 }
 
-.song {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-.music {
-    margin-top: 20px;
-    background: linear-gradient(45deg, #FF6B00, #FF0084, #002AFF);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-h5, h6 {
-    color: white;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-audio {
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px;
-    width: 90%;
-}
-
-audio::-webkit-media-controls-panel {
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 0 10px black;
-}
-
-audio::-webkit-media-controls-panel * {
-    color: white !important;
-    text-shadow: 0 0 5px black;
-}
-
-audio::-webkit-media-controls-volume-slider::-webkit-slider-thumb {
-    background-color: #fff;
-    border: 1px solid #fff;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
-audio::-webkit-media-controls-volume-slider::-webkit-slider-runnable-track {
-    background-color: #888;
-    height: 3px;
-}
 
 .info {
     background: white;
