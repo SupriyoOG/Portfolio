@@ -53,8 +53,13 @@ h1 {
 .form textarea:focus {
     border-color: var(--primary);
     outline: 1px solid #007BFF50;
-    box-shadow: 0 0 8px var(--primary)
+    box-shadow: 0 0 4px var(--primary)
 }
+
+:invalid {
+        border-color: red;
+}
+
 
 .form input[type="submit"] {
     width: 100%;
@@ -78,4 +83,12 @@ h1 {
     top: 2rem;
     right: 2rem;
     transform: scale(2);
+}
+
+.theme i {
+        font-size: 12px;
+}
+
+.theme i:hover {
+        color: var(--primary);
 }
