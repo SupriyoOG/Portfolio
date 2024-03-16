@@ -1,14 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tell me your thoughts :)</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 
 <body>
+    <div class="theme">
+        <i id="theme" class="fa-solid fa-sun"></i>
+    </div>
 
+    <h1>What are your Thoughts?</h1>
+
+    <div class="form">
+        <form action="">
+            <input placeholder="Name" type="text" class="name" id="name">
+            <input placeholder="Email" type="email" class="email" id="email">
+            <textarea placeholder="Any Advice? A thought? Ask here!" name="" id="desc" cols="30" rows="10"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/617fda4c29.js" crossorigin="anonymous"></script>
+    <script>
+            function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-theme');
+    updateThemeIcons();
+    updateBodyBackground();
+}
+
+function updateThemeIcons() {
+    const themeIcons = document.querySelectorAll('.theme i');
+    const isDarkTheme = document.body.classList.contains('dark-theme');
+    themeIcons.forEach(icon => {
+        icon.classList.toggle('fa-moon', !isDarkTheme);
+        icon.classList.toggle('fa-sun', isDarkTheme);
+    });
+}
+
+function updateBodyBackground() {
+    const body = document.body;
+    const form = document.querySelector('.form');
+    const inputs = document.querySelectorAll('.form input');
+    const textarea = document.querySelector('.form textarea');
+    const submitButton = document.querySelector('.form input[type="submit"]');
+    const isDarkTheme = body.classList.contains('dark-theme');
+    const bg = isDarkTheme ? '#111' : '#f8f9fa'; // Dark and light background colors
+    const textColor = isDarkTheme ? '#fff' : '#111'; // Light and dark text colors
+    body.style.backgroundColor = bg;
+    body.style.color = textColor;
+    form.style.backgroundColor = bg; // Set form background color
+    textarea.style.backgroundColor = bg; // Set textarea background color
+    textarea.style.color = textColor; // Set textarea text color
+    inputs.forEach(input => {
+        input.style.backgroundColor = bg; // Set input background color
+        input.style.color = textColor; // Set input text color
+    });
+    submitButton.style.backgroundColor = '#007bff'; // Always set button background color to blue
+    submitButton.style.color = '#fff'; // Set button text color to white
+}
+
+const themeIcons = document.querySelectorAll('.theme i');
+themeIcons.forEach(icon => {
+    icon.addEventListener('click', toggleTheme);
+});
+
+updateThemeIcons();
+updateBodyBackground();
+    </script>
 </body>
 
 </html>

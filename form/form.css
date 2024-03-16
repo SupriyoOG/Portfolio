@@ -1,0 +1,79 @@
+:root {
+    --primary: #007bff;
+    --secondary: #f8f9fa;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--secondary);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+h1 {
+    position: relative;
+    top: 10vh;
+}
+
+.form {
+    position: relative;
+    top: 10vh;
+    width: 80%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f3f3f3;
+    color: #333;
+    font-family: 'Poppins';
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+    border-color: var(--primary);
+    outline: 5px solid #007BFF50;
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins';
+}
+
+.form input[type="submit"]:hover {
+    background: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.theme {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transform: scale(2);
+}

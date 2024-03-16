@@ -9,3 +9,9 @@ projectBtn.addEventListener('mouseover', () => {
 projectBtn.addEventListener('mouseout', () => {
         info.style.transform = 'translate(-100vh) rotate(60deg) skew(50deg)';
 });
+
+
+
+document.querySelector('.thoughts-page').addEventListener('click', function() {
+            window.location.href = '/form/form.html';
+        });

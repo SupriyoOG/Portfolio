@@ -11,7 +11,7 @@ body {
 
 }
 
-.minigame {
+.thoughts-page {
     border: 1px solid white;
     z-index: 10;
     position: fixed;
@@ -29,8 +29,8 @@ body {
     cursor: pointer;
 }
 
-.minigame::after {
-    content: "Still in progress";
+.thoughts-page::after {
+    content: "Redirecting";
     position: absolute;
     top: calc(100% + 10px);
     left: 50%;
@@ -45,7 +45,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.minigame:hover::after {
+.thoughts-page:hover::after {
     opacity: 1;
     transform: translateX(-50%) translateY(10px)
 }
