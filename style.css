@@ -236,11 +236,12 @@ h1 {
     width: 300px;
     text-align: center;
     margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 30px white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+    border-bottom: 10px solid #111;
     position: relative;
     top: -210vh;
-    transform: translateX(-200%) rotate(30deg) skew(50deg);
+    transform: translateX(-300%) rotate(30deg) skew(50deg);
     transition: all .5s ease;
 }
 

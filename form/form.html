@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tell me your thoughts :)</title>
+    <title>Share Your Thoughts</title>
     <link rel="stylesheet" href="form.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -13,68 +13,98 @@
 </head>
 
 <body>
+
     <div class="theme">
         <i id="theme" class="fa-solid fa-moon"></i>
     </div>
 
-    <h1>What are your Thoughts?</h1>
+    <p id="info"></p>
+    <h1>Share Your Thoughts</h1>
 
     <div class="form">
-        <form action="">
-            <input required placeholder="Name" type="text" class="name" id="name">
-            <input required placeholder="Email" type="email" class="email" id="email">
-            <textarea required placeholder="Any Advice? A thought? Ask here!" name="" id="desc" cols="30" rows="10"></textarea>
-            <input type="submit" value="Submit">
+        <form action="#">
+            <input required maxlength="30" placeholder="Your Name" type="text" class="name" id="name">
+            <input required placeholder="Your Email" type="email" class="email" id="email">
+            <textarea required placeholder="Share your advice, thoughts, or questions here!" id="desc" cols="30" rows="10"></textarea>
+            <input type="submit" onclick="showConfirm()" value="Submit">
         </form>
     </div>
 
     <script src="https://kit.fontawesome.com/617fda4c29.js" crossorigin="anonymous"></script>
     <script>
-            function toggleTheme() {
-    const body = document.body;
-    body.classList.toggle('dark-theme');
-    updateThemeIcons();
-    updateBodyBackground();
-}
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme');
+            updateThemeIcons();
+            updateBodyBackground();
+        }
 
-function updateThemeIcons() {
-    const themeIcons = document.querySelectorAll('.theme i');
-    const isDarkTheme = document.body.classList.contains('dark-theme');
-    themeIcons.forEach(icon => {
-        icon.classList.toggle('fa-moon', !isDarkTheme);
-        icon.classList.toggle('fa-sun', isDarkTheme);
-    });
-}
+        function updateThemeIcons() {
+            const themeIcons = document.querySelectorAll('.theme i');
+            const isDarkTheme = document.body.classList.contains('dark-theme');
+            themeIcons.forEach(icon => {
+                icon.classList.toggle('fa-moon', !isDarkTheme);
+                icon.classList.toggle('fa-sun', isDarkTheme);
+            });
+        }
 
-function updateBodyBackground() {
-    const body = document.body;
-    const form = document.querySelector('.form');
-    const inputs = document.querySelectorAll('.form input');
-    const textarea = document.querySelector('.form textarea');
-    const submitButton = document.querySelector('.form input[type="submit"]');
-    const isDarkTheme = body.classList.contains('dark-theme');
-    const bg = isDarkTheme ? '#111' : '#f8f9fa'; // Dark and light background colors
-    const textColor = isDarkTheme ? '#fff' : '#111'; // Light and dark text colors
-    body.style.backgroundColor = bg;
-    body.style.color = textColor;
-    form.style.backgroundColor = bg;
-    textarea.style.backgroundColor = bg; // Set textarea background color
-    textarea.style.color = textColor; // Set textarea text color
-    inputs.forEach(input => {
-        input.style.backgroundColor = bg; // Set input background color
-        input.style.color = textColor; // Set input text color
-    });
-    submitButton.style.backgroundColor = '#007bff'; // Always set button background color to blue
-    submitButton.style.color = '#fff'; // Set button text color to white
-}
+        function updateBodyBackground() {
+            const body = document.body;
+            const form = document.querySelector('.form');
+            const inputs = document.querySelectorAll('.form input');
+            const textarea = document.querySelector('.form textarea');
+            const submitButton = document.querySelector('.form input[type="submit"]');
+            const isDarkTheme = body.classList.contains('dark-theme');
+            const backgroundColor = isDarkTheme ? '#111' : '#f8f9fa';
+            const textColor = isDarkTheme ? '#fff' : '#111';
+            body.style.backgroundColor = backgroundColor;
+            body.style.color = textColor;
+            form.style.backgroundColor = backgroundColor;
+            textarea.style.backgroundColor = backgroundColor;
+            textarea.style.color = textColor;
+            inputs.forEach(input => {
+                input.style.backgroundColor = backgroundColor;
+                input.style.color = textColor;
+            });
+            submitButton.style.backgroundColor = '#007bff';
+            submitButton.style.color = '#fff';
+        }
 
-const themeIcons = document.querySelectorAll('.theme i');
-themeIcons.forEach(icon => {
-    icon.addEventListener('click', toggleTheme);
-});
+        const themeIcons = document.querySelectorAll('.theme i');
+        themeIcons.forEach(icon => {
+            icon.addEventListener('click', toggleTheme);
+        });
 
-updateThemeIcons();
-updateBodyBackground();
+        function showConfirm() {
+            const inputs = document.querySelectorAll('.form input');
+            const textarea = document.querySelector('.form textarea');
+            const infoText = document.getElementById('info');
+
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (input.hasAttribute('required') && input.value.trim() === '') {
+                    input.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '';
+                }
+            });
+
+            if (textarea.hasAttribute('required') && textarea.value.trim() === '') {
+                textarea.style.borderColor = 'red';
+                isValid = false;
+            } else {
+                textarea.style.borderColor = '';
+            }
+
+            if (isValid) {
+                infoText.innerHTML = 'Form Submitted Successfully!';
+            }
+        }
+
+        updateThemeIcons();
+        updateBodyBackground();
     </script>
 </body>
 
