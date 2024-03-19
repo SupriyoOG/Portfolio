@@ -13,5 +13,20 @@ projectBtn.addEventListener('mouseout', () => {
 
 
 document.querySelector('.thoughts-page').addEventListener('click', function() {
-            window.location.href = 'form/form.html';
-        });
+        window.location.href = 'form/form.html';
+});
+
+function checkInternet() {
+    const divInternet = document.getElementById('internet');
+
+    if (!navigator.onLine) {
+        divInternet.style.transform = 'translate(-50%, 0)';
+    } else {
+        divInternet.style.transform = 'translate(-50%, -100vh)';
+    }
+}
+
+window.addEventListener('online', checkInternet);
+window.addEventListener('offline', checkInternet);
+
+checkInternet();
