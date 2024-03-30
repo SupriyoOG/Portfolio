@@ -17,13 +17,18 @@ document.querySelector('.thoughts-page').addEventListener('click', function() {
 });
 
 function checkInternet() {
-    const divInternet = document.getElementById('internet');
+        const divInternet = document.getElementById('internet');
 
-    if (!navigator.onLine) {
-        divInternet.style.transform = 'translate(-50%, 0)';
-    } else {
-        divInternet.style.transform = 'translate(-50%, -100vh)';
-    }
+        if (!navigator.onLine) {
+                divInternet.style.transform = 'translate(-50%, 0)';
+                if (alert('No internet? Click to retry:'))
+                {
+                        window.reload();
+                }
+
+        } else {
+                divInternet.style.transform = 'translate(-50%, -100vh)';
+        }
 }
 
 window.addEventListener('online', checkInternet);
